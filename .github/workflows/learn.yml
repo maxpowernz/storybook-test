@@ -4,12 +4,13 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 
 on: [push]
 
+workflow_dispatch:
+
 jobs:
-  check-bats-version:
+  make_directory:
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout
-      - uses: actions/checkout@v3
       - name: Create folder
         run: |
           mkdir mydirname
